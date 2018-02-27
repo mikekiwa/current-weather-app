@@ -36,6 +36,19 @@ function weather(state = initialState, action) {
         })
       } else {
         alert('City name entered is not correct. Please try again.')
+        return Object.assign({}, state, {
+          name: '',
+          weatherDesc: '',
+          latitude: '',
+          longitude: '',
+          temp: '',
+          minTemp: '',
+          maxTemp: '',
+          humidity: '',
+          pressure: '',
+          visibility: '',
+          windSpeed: ''
+        })
       }
   }
   return state

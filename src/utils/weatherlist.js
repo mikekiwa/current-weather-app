@@ -7,15 +7,17 @@ class WeatherList extends Component {
     const { currentWeatherData } = this.props
     if (currentWeatherData.name !== '') {
       return (
-        <span className="weather-results" key={currentWeatherData.name}>
-          <p>City: {currentWeatherData.name}, Latitude: {currentWeatherData.latitude}, Longitude: {currentWeatherData.longitude}</p>
-          <p>{currentWeatherData.weatherDesc}</p>
+        <div className="card weather-forecast" key={currentWeatherData.name}>
+          <p className="location">City: {currentWeatherData.name}</p>
+          <p className="description">{currentWeatherData.weatherDesc}</p>
+          <p>Latitude: {currentWeatherData.latitude}</p>
+          <p>Longitude: {currentWeatherData.longitude}</p>
           <p>Temperature: {currentWeatherData.temp} (Min: {currentWeatherData.minTemp}, Max: {currentWeatherData.maxTemp})</p>
           <p>Atmospheric pressure: {currentWeatherData.pressure}</p>
           <p>Humidity: {currentWeatherData.humidity}</p>
           <p>Visibility: {currentWeatherData.visibility}</p>
           <p>Wind Speed: {currentWeatherData.windSpeed}</p>
-        </span>
+        </div>
       );
     } else {
       return (

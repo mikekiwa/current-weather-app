@@ -7,7 +7,7 @@ class WeatherList extends Component {
     const { currentWeatherData } = this.props
     if (currentWeatherData.name !== '') {
       return (
-        <span key={currentWeatherData.name}>
+        <span className="weather-results" key={currentWeatherData.name}>
           <p>City: {currentWeatherData.name}, Latitude: {currentWeatherData.latitude}, Longitude: {currentWeatherData.longitude}</p>
           <p>{currentWeatherData.weatherDesc}</p>
           <p>Temperature: {currentWeatherData.temp} (Min: {currentWeatherData.minTemp}, Max: {currentWeatherData.maxTemp})</p>

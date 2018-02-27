@@ -1,5 +1,10 @@
 body {
-  margin: 0;
-  padding: 0;
+  margin: 10;
+  padding: 10;
   font-family: sans-serif;
+}
+
+.heading {
+  text-align: center;
+  margin: 30px 0 20px 0;
 }

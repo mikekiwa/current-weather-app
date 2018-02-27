@@ -22,7 +22,7 @@ class SearchBar extends Component {
   onFormSubmit(e) {
     e.preventDefault();
 
-    this.props.fetchWeather(this.state.term);
+    this.props.fetchWeather(this.state.cityName);
     this.setState({ cityName: '' })
   }
 
